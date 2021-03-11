@@ -1,0 +1,2 @@
+let a=1,b=2,c=2;
+//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VzIjpbImluZGV4LmpzIl0sInNvdXJjZXNDb250ZW50IjpbImxldCBhID0gMTsgIFxubGV0IGIgPSAyOyAgXG5sZXQgYyA9IDI7ICAgIl0sIm5hbWVzIjpbImEiLCJiIiwiYyJdLCJtYXBwaW5ncyI6IkFBQUEsSUFBSUEsRUFBSSxFQUNKQyxFQUFJLEVBQ0pDLEVBQUkifQ==
