@@ -55,7 +55,7 @@ gulp.task('javascript', () => {
 gulp.task('browsersync', () => {
     browserSync.init({
         server: {
-            baseDir: './src'
+            baseDir: './build/'
         }
     })
 
@@ -69,6 +69,5 @@ gulp.task('browsersync', () => {
 
 gulp.task('default', () => {
     gulp.watch(['./src/style.css', './src/index.js'], gulp.series('browsersync'));
-    gulp.watch('./images/*', gulp.series('imagemin'));
 });
 
