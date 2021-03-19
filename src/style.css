@@ -1,0 +1,210 @@
+@keyframes shine {
+    0% {
+        background-position: left;
+    }
+    100% {
+        background-position: right;
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* GLOBAL */
+html, body {
+    background-color: rgba(34, 38, 42, 0.9);
+    font-family: 'Lora', serif;
+    min-width: 250px;
+}
+
+main {
+    max-width: 1500px;
+}
+
+mark {
+    background-color: rgba(0, 0, 0, 0.377);
+    padding: 0;
+}
+
+.font-great-vibes {
+    font-family: 'Great Vibes', cursive;
+}
+
+.fs-custom {
+    font-size: calc(0.8rem + 0.5vw);
+}
+
+/* MAIN SLIDER */
+.carousel {
+    background-color: rgba(0, 0, 0, 0.459) !important;
+}
+
+.carousel-image {
+    min-height: 350px;
+    object-fit: cover;
+}
+
+.first_slide-header {
+    background-clip: text;
+}
+
+.first_slide-heading {
+    background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(0, 0, 0));
+    background-size: 50px;
+    background-repeat: no-repeat;
+    background-clip: text;
+    color: rgba(255, 255, 255, 0);
+    animation: shine 3s linear infinite;
+}
+
+.carousel-indicators button {
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 100% !important;
+}
+
+.carousel-control-icon {
+    max-width: 40px;
+    min-width: 25px;
+    width: 8vw;
+}
+
+.carousel-item-text {
+    animation: fade 0.5s linear 0.5s forwards;
+    opacity: 0;
+    width: 50%;
+    margin-top: 10px;
+    max-width: 350px;
+}
+
+/* ABOUT */
+.about-header {
+    height: max-content;
+}
+
+.accordion-button::after {
+    background-image: none !important;
+    border-bottom: 1px solid white;
+    border-right: 1px solid white;
+    transform: rotate(45deg);
+    height: 4vw;
+    width: 4vw;
+    max-height: 20px;
+    max-width: 20px;
+}
+
+button:not(.collapsed) {
+    background-color: inherit !important;
+}
+
+button:not(.collapsed)::after {
+    transform: rotate(225deg) !important;
+}
+
+/* FORM */
+#reservation-button {
+    background: #4b4442 !important;
+}
+
+#reservation-button:hover {
+    background: #a3796b !important;
+}
+
+.ui-datepicker-trigger {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    width: 30px;
+}
+
+/* MENU */
+#menu-card {
+    background-color: rgb(197, 196, 196);
+}
+
+#card-overlay {
+    display: none;
+}
+
+.card-image {
+    object-fit: cover;
+    width: 240px;
+    height: 150px;
+}
+
+/* MEDIA QUERIES */
+@media(min-width:425px) {
+    .first_slide-heading {
+        font-size: calc(1rem + 4vw);
+    }
+}
+
+@media(min-width: 768px) {
+    .about-header {
+        height: 160px;
+    }
+    .navbar {
+        transition: background-color 500ms;
+    }
+    .bg-dark-transparent-md {
+        background-color: rgba(34, 38, 42, 0.9) !important;
+    }
+    .first_slide-header {
+        top: 40% !important;
+    }
+    .carousel-item-text {
+        font-size: calc(1.25rem + 0.3vw)
+    }
+    .category-item {
+        transition: transform 300ms linear;
+    }
+    .category-item:hover {
+        transform: scale(1.2);
+    }
+    #menu-card:hover {
+        background-color: rgba(39, 39, 39, 0.39) !important;
+    }
+    #card-overlay {
+        background-color: rgba(104, 62, 71, 0.514);
+        display: initial;
+        height: 0;
+        opacity: 0;
+        transition: height 300ms linear;
+        z-index: 2;
+    }
+    #menu-card:hover #card-overlay {
+        height: 100%;
+        opacity: 1;
+    }
+    #menu-card:hover #card-overlay .overlay-text {
+        top: initial;
+    }
+    .overlay-text {
+        top: 0;
+    }  
+    .card-price {
+        display: none;
+    }
+    .social-icon {
+        cursor: pointer;
+    }
+    .social-icon:hover path {
+        fill: rgb(250, 60, 70);
+    }
+}
+
+@media(min-width:1026px) {
+    .carousel-image {
+        max-height: 100vh;
+    }
+    .reservation-form {
+        width: 75%;
+        max-width: 1000px;
+    }
+}
