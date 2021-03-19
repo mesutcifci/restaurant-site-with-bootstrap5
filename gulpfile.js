@@ -31,7 +31,7 @@ gulp.task('style', () => {
 gulp.task('imagemin', () => {
     return gulp.src('./images/*')
         .pipe(imagemin([
-            imagemin.mozjpeg({ quality: 75, progressive: true })
+            imagemin.mozjpeg({ quality: 50, progressive: true })
         ]))
         .pipe(gulp.dest('./images/'))
 });
